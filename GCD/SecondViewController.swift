@@ -38,8 +38,14 @@ class SecondViewController: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        guard let url = imageURL, let imageData = try? Data(contentsOf: url) else { return }
-        self.image = UIImage(data: imageData)
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            guard let url = self.imageURL, let imageData = try? Data(contentsOf: url) else { return }
+            
+            DispatchQueue.main.async { //UI should be processed in the main thread
+                self.image = UIImage(data: imageData)
+            }
+        }
     }
 }
 

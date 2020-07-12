@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  GCD
 //
 //  Created by Виктория Саклакова on 11.07.2020.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SecondViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 }
-

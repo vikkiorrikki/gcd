@@ -52,16 +52,25 @@
                                     <constraint firstAttribute="height" constant="443" id="lJX-fp-PDd"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ehO-WJ-Rc1">
+                                <rect key="frame" x="197" y="299" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ObE-RS-ClR" firstAttribute="top" secondItem="ij6-wo-kwD" secondAttribute="top" id="3kC-Uy-MEl"/>
+                            <constraint firstItem="ehO-WJ-Rc1" firstAttribute="centerY" secondItem="ObE-RS-ClR" secondAttribute="centerY" id="6cB-FQ-qMl"/>
+                            <constraint firstItem="ehO-WJ-Rc1" firstAttribute="centerX" secondItem="ObE-RS-ClR" secondAttribute="centerX" id="Ftb-ns-oZv"/>
                             <constraint firstItem="ObE-RS-ClR" firstAttribute="centerX" secondItem="ij6-wo-kwD" secondAttribute="centerX" id="K7h-3P-GCs"/>
                             <constraint firstItem="ObE-RS-ClR" firstAttribute="width" secondItem="ij6-wo-kwD" secondAttribute="width" id="Yaa-gy-7Cz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ij6-wo-kwD"/>
                     </view>
                     <navigationItem key="navigationItem" id="RWX-e5-TEs"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ehO-WJ-Rc1" id="PcI-Qf-W5e"/>
+                        <outlet property="imageView" destination="ObE-RS-ClR" id="pYG-1a-nbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZ1-Zn-EK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
